@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="hybird-platform-deploymentFlow" doc:id="18671920-fb54-449b-a19f-323d9cc102c0" >
 		<http:listener doc:name="Listener" doc:id="35f652be-06e0-454e-b45b-d9afaf0cb673" config-ref="HTTP_Listener_config" path="/hpd"/>
 		<set-payload value='#["Hybrid Platform deployment successful"]' doc:name="Set Payload" doc:id="17b857d5-b6df-4d14-a491-2edf7ca16007" />
+		<logger level="INFO" doc:name="Logger" doc:id="d6a9fd29-8468-4aae-a440-bd9ae47f2f97" message="#[payload]"/>
 	</flow>
 </mule>
